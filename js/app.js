@@ -68,7 +68,130 @@ for(let i = 0; i < customers.length; i++)
 {
     if (customers[i].is_active === false)
     {
-        console.log(customers[i].name, customers[i].total_balance); 
+        console.log(customers[i].name); 
     }
 }
+
+let company = [
+    {
+        name: `TechEmpower`,
+        stock_symbol: `TE`,
+        sector: `Technology`,
+        industry: `Consumer Electronics`,
+        founded: 1801,
+        headquarters: `San Francisco`,
+        market_cap: 5000000000,
+        yearly_revenue: 1000000000,
+        yearly_profit: 100000000,
+        employees: 5000
+    },
+    {
+        name: `MedicoPharma`,
+        stock_symbol: `MP`,
+        sector: `Healthcare`,
+        industry: `Pharmaceuticals`,
+        founded: 1990,
+        headquarters: `New York`,
+        market_cap: 10000000000,
+        yearly_revenue: 2000000000,
+        yearly_profit: 500000000,
+        employees: 8000
+    },
+    {
+        name: `Discount World`,
+        stock_symbol: `DW`,
+        sector: `Retail`,
+        industry: `Discount Stores`,
+        founded: 1949,
+        headquarters: `Chicago`,
+        market_cap: 2000000000,
+        yearly_revenue: 500000000,
+        yearly_profit: 50000000,
+        employees: 3000
+    },
+    {
+        name: `ProudCorp`,
+        stock_symbol: `PC`,
+        sector: `Consumer Goods`,
+        industry: `Personal Products`,
+        founded: 1985,
+        headquarters: `Toronto`,
+        market_cap: 8000000000,
+        yearly_revenue: 1500000000,
+        yearly_profit: 250000000,
+        employees: 10000
+    },
+    {
+        name: `E-Marketplace`,
+        stock_symbol: `EM`,
+        sector: `Retail`,
+        industry: `E-commerce`,
+        founded: 2000,
+        headquarters: `Seattle`,
+        market_cap: 600000000000,
+        yearly_revenue: 3000000000,
+        yearly_profit: 500000000,
+        employees: 12000
+    }
+];
+
+i = 0;
+while(i < company.length)
+{
+    console.log(company[i].name, company[1].yearly_revenue);
+    i++;
+}
+
+for(let i = 0; i < company.length; i++)
+{
+    if(company[i].sector === `Technology`)
+    {
+        console.log(company[i].name);
+    }
+}
+
+for(let i = 0; i < company.length; i++) 
+{
+    if (company[i].founded < 1950)
+    {
+        console.log(company[i].name, company[i].founded);
+    }
+}
+
+i = 0;
+while(i < company.length)
+{
+    if (company[i].market_cap > 500000000000)
+    {
+        console.log(company[i].name);
+    }
+    i++;
+}
+
+for(let i = 0; i < company.length; i++)
+{
+    if(company[i].sector != `Technology`)
+    {
+        console.log(company[i].name, company[i].sector);
+    }
+}
+
+i = 0;
+while(i < company.length)
+{
+    if(company[i].yearly_revenue >= 1000000000 && company[i].yearly_revenue <= 100000000000)
+    {
+        console.log(company[i].name, company[i].yearly_revenue);
+    }
+    i++;
+}
+
+let revenue_sum = 0;
+for(let i = 0; i < company.length; i++)
+{
+    revenue_sum = revenue_sum + company[i].yearly_revenue
+}
+
+let revenue_average = revenue_sum / company.length;
+console.log(revenue_average);
 
