@@ -130,7 +130,7 @@ let company = [
         headquarters: `Seattle`,
         market_cap: 600000000000,
         yearly_revenue: 3000000000,
-        yearly_profit: 500000000,
+        yearly_profit: 300000000,
         employees: 12000
     }
 ];
@@ -195,3 +195,32 @@ for(let i = 0; i < company.length; i++)
 let revenue_average = revenue_sum / company.length;
 console.log(revenue_average);
 
+let highest_profit = 0;
+let highest_profit_company = [];
+
+for (let i = 0; i < company.length; i++)
+{
+    if (highest_profit < company[i].yearly_profit)
+    {
+        highest_profit = company[i].yearly_profit;
+        highest_profit_company = company[i].name;
+    }
+}
+
+console.log(highest_profit_company);
+
+
+let highest_revenue_per_employee = 0;
+let highest_revenue_per_employee_company = ``;
+for (let i = 0; i < company.length; i++)
+{
+    let revenue_per_employee = company[i].yearly_revenue / company[i].employees;
+
+    if (revenue_per_employee > highest_revenue_per_employee)
+    {
+        highest_revenue_per_employee = revenue_per_employee;
+        highest_revenue_per_employee_company = company[i].name;
+    }
+}
+
+console.log(highest_revenue_per_employee_company);
