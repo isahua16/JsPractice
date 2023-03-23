@@ -270,3 +270,19 @@ function is_subscribed_and_18(arr)
 
 let my_array = is_subscribed_and_18([{name: `isael`, age: 56, is_subscribed: false}, {name: `amy`, age: 14, is_subscribed: true}, {name: `chantal`, age: 75, is_subscribed: false}, {name: `claudine`, age: 39, is_subscribed: true}, {name: `miggel`, age: 38, is_subscribed: false}]);
 
+function subscribed_message (arr)
+{
+    let sum = 0;
+    for(let i = 0; i < arr.length; i++)
+    {
+        sum = sum + arr[i].is_subscribed;
+    }
+    if(sum / arr.length >= 0.5)
+    {
+        console.log(`At least 50% of users are subscribed`);
+    }
+}
+
+let my_message = subscribed_message([{name: `isael`, age: 56, is_subscribed: false}, {name: `amy`, age: 14, is_subscribed: true}, {name: `chantal`, age: 75, is_subscribed: false}, {name: `claudine`, age: 39, is_subscribed: true}, {name: `miggel`, age: 38, is_subscribed: false}]);
+
+
