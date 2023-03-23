@@ -253,3 +253,16 @@ function longest_string(arr)
 }
 
 let my_longest_string = longest_string([`asdf`, `asdfds`, `asdfgasasdfg`]);
+
+function is_subscribed_and_18(obj)
+{
+    if(obj.age >= 18 && obj.is_subscribed === true)
+    {
+        return true;
+    }
+
+    return false;
+}
+
+let my_user = is_subscribed_and_18({name: `isael`, age: 56, is_subscribed: false});
+
