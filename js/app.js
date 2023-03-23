@@ -224,3 +224,32 @@ for (let i = 0; i < company.length; i++)
 }
 
 console.log(highest_revenue_per_employee_company);
+
+function sum_of_even_index(arr)
+{
+    let sum = 0;
+    for(let i = 0; i < arr.length; i = i + 2)
+    {
+        sum = sum + arr[i];
+    }
+    return sum;
+}
+
+let my_sum = sum_of_even_index([14, 12, 33, 42, 57, 61, 73, 87, 98, 100, 116, 172]);
+
+console.log(my_sum);
+
+function longest_string(arr)
+{
+    let str = ``;
+    for (let i = 0; i < arr.length; i++)
+    {
+        if(str.length < arr[i].length)
+        {
+            str = arr[i];
+        }
+    }
+    return str;
+}
+
+let my_longest_string = longest_string([`asdf`, `asdfds`, `asdfgasasdfg`]);
